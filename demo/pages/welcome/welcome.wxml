@@ -1,0 +1,9 @@
+<!-- wxml为小程序的骨架文件，会自动引入js及wxss文件 -->
+
+<view class='container'>
+    <image class='user-avatar' src='/images/avatar.jpg'></image>
+    <text class='user-name'><text>Hello,</text>A1学无涯</text>
+    <view class='moto-container'>
+        <text class='moto'>开始小程序之旅</text>
+    </view>
+</view>

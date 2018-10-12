@@ -1,0 +1,21 @@
+<import src="./movie-list/movie-list-template.wxml"></import>
+<import src="./movie-grid/movie-grid-template.wxml"></import>
+<view class="search-container">
+    <icon class="search-icon" type="search" size="15" color="#0188FB" />
+    <input class="search-input" type="text" placeholder="你好世界 、巨齿鲨" placeholder-class="input-placeholder" bind:focus="onBindFocus" bind:confirm="onBindConfirm" />
+    <image wx:if="{{searchPanelShow}}" src="/images/icon/xx.png" class="canael-search" bind:tap="onCancelSearch" />
+</view>
+<view class="container" wx:if="{{containerShow}}">
+    <view class="movies-template">
+        <template is="movie-list-template" data="{{...inTheaters}}"></template>
+    </view>
+    <view class="movies-template">
+        <template is="movie-list-template" data="{{...comingSonn}}"></template>
+    </view>
+    <view class="movies-template">
+        <template is="movie-list-template" data="{{...top250}}"></template>
+    </view>
+</view>
+<view class="search-panel" wx:if="{{searchPanelShow}}">
+    <template is="movie-grid-template" data="{{...searchResult}}"></template>
+</view>

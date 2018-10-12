@@ -1,13 +1,14 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+<import src="./btn/btn-template.wxml"></import>
+
+<view class="" hover-class="" hover-stop-propagation="false">
+    <button class="btn" hover-class="btn-focus" type="defult">
+        按钮文本
+    </button>
 </view>
+
+
+<view >
+    <button  bind:tap="">按钮</button>
+</view>
+
+<template is="btn-template" data="{{loading}}"></template>

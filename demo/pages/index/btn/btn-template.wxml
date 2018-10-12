@@ -1,0 +1,5 @@
+<template name="btn-template">
+    <view>
+        <button loading="{{loading}}" bindtap='onBtnTap'>按钮模板</button>
+    </view>
+</template>

@@ -1,0 +1,41 @@
+<view class="container">
+    <map id="map" longitude="114.68" latitude="33.64" scale="16" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+    <form bind:submit="onFormSubmit" bind:reset="onFormReset">
+        <view>
+            <text>switch</text>
+            <switch name="switch" type="switch" color="#0188FB" bind:change="onSwitchChange" />
+        </view>
+        <view>
+            <text>slider</text>
+            <slider name="silder" value="50" min="0" max="200" show-value="true" />
+        </view>
+        <view>
+            <text>radio</text>
+            <radio-group name="radio-group" bind:change="onRadioChange">
+                <radio value="你好" checked="true" />
+                你好
+                <radio value="世界" />
+                世界
+            </radio-group>
+        </view>
+        <view>
+            <text>checkbox</text>
+            <checkbox-group name="checkbox-group" bind:change="onCheckboxChange">
+                <label>
+                    <checkbox value="你好" />
+                    你好
+                </label>
+                <label>
+                    <checkbox value="世界" />
+                    世界
+                </label>
+                <label>
+                    <checkbox value="蓝天" />
+                    蓝天
+                </label>
+            </checkbox-group>
+        </view>
+        <button form-type="submit">提交</button>
+        <button form-type="reset">重置</button>
+    </form>
+</view>
